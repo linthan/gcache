@@ -5,8 +5,8 @@ import (
 	"errors"
 	"fmt"
 
-	_ "github.com/8treenet/gcache/driver"
-	"github.com/8treenet/gcache/option"
+	_ "github.com/linthan/gcache/driver"
+	"github.com/linthan/gcache/option"
 	"github.com/jinzhu/gorm"
 )
 

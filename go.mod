@@ -1,4 +1,4 @@
-module github.com/8treenet/gcache
+module github.com/linthan/gcache
 
 go 1.12
 

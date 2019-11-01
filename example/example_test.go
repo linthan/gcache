@@ -6,10 +6,10 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/8treenet/gcache"
-	"github.com/8treenet/gcache/option"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
+	"github.com/linthan/gcache"
+	"github.com/linthan/gcache/option"
 )
 
 var (
@@ -49,7 +49,7 @@ func init() {
 	opt.PenetrationSafe = false    //开启防穿透, 默认false。
 
 	//缓存中间件 注入到Gorm
-	cachePlugin = gcache.AttachDB(db, &opt, &option.RedisOption{Addr: "localhost:6379"})
+	cachePlugin = gcache.AttachDB(db, &opt, nil)
 
 	InitData()
 	//开启Debug，查看日志

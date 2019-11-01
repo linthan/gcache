@@ -1,8 +1,8 @@
 package internal
 
 import (
-	"github.com/8treenet/gcache/option"
 	"github.com/jinzhu/gorm"
+	"github.com/linthan/gcache/option"
 )
 
 const (

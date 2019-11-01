@@ -1,8 +1,8 @@
 package gcache
 
 import (
-	"github.com/8treenet/gcache/internal"
-	"github.com/8treenet/gcache/option"
+	"github.com/linthan/gcache/internal"
+	"github.com/linthan/gcache/option"
 	"github.com/jinzhu/gorm"
 )
 

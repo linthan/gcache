@@ -1,8 +1,8 @@
 package internal
 
 import (
-	"github.com/8treenet/gcache/option"
 	"github.com/jinzhu/gorm"
+	"github.com/linthan/gcache/option"
 )
 
 type plugin struct {
@@ -13,13 +13,13 @@ type plugin struct {
 }
 
 // InjectGorm .
-func InjectGorm(db *gorm.DB, opt *option.DefaultOption, redisOption *option.RedisOption) *plugin {
+func InjectGorm(db *gorm.DB, opt *option.DefaultOption, redisClient RedisClient) *plugin {
 	cp := new(plugin)
 	opt.Init()
 	cp.db = db
 	cp.defaultOpt = opt
 
-	handle := newHandleManager(db, cp, redisOption)
+	handle := newHandleManager(db, cp, redisClient)
 	handle.registerCall()
 	go handle.RefreshRun()
 	cp.handle = handle

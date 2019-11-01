@@ -2,7 +2,7 @@ package internal
 
 import (
 	"fmt"
-	"github.com/8treenet/gcache/option"
+	"github.com/linthan/gcache/option"
 	"reflect"
 
 	"github.com/jinzhu/gorm"
